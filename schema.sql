@@ -87,6 +87,12 @@ CREATE TABLE detalle_ordenes (
     item_id VARCHAR(5) NOT NULL REFERENCES items(id)
 );
 
+CREATE TABLE historial (
+    fecha DATETIME NOT NULL,
+    tabla VARCHAR(100) NOT NULL,
+    tipo VARCHAR(25) NOT NULL
+);
+
 INSERT INTO items (id, producto, precio)
 VALUES
     ('C1', 'Cheeseburger', 41.00),
